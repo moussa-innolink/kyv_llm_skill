@@ -185,3 +185,25 @@ User-Agent:            KyvShield-Webhook/1.0
 ```
 
 **Signature verification:** HMAC-SHA256 of the raw body using the API key as secret. Compare with `X-KyvShield-Signature` header (strip `sha256=` prefix).
+
+## Repositories
+
+### SDKs
+| Platform | Repository |
+|---|---|
+| Flutter | https://github.com/moussa-innolink/kyv_flutter_lite |
+| Android | https://github.com/moussa-innolink/kyv_android |
+| iOS | https://github.com/moussa-innolink/kyv_swift |
+| React Native | https://github.com/moussa-innolink/kyv_react_native |
+
+### Example Apps
+| Platform | Repository |
+|---|---|
+| Flutter | https://github.com/moussa-innolink/kyb_example_flutter |
+| Android | https://github.com/moussa-innolink/kyb_example_android |
+| iOS | https://github.com/moussa-innolink/kyb_example_swift |
+| React Native | https://github.com/moussa-innolink/kyb_example_react_native |
+| Web | https://github.com/moussa-innolink/kyb_example_web |
+
+### Documentation
+- Developer Portal: https://kyvshield-naruto.innolinkcloud.com/developer
