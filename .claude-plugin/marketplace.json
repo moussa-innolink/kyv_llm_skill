@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    {
+      "name": "kyvshield",
+      "description": "KyvShield KYC SDK integration — teaches Claude to integrate identity verification (selfie liveness, document OCR, face matching) into Web, Flutter, Android, iOS, and React Native apps. Includes webhook handling.",
+      "version": "1.0.0",
+      "author": {
+        "name": "InnoLink"
+      },
+      "homepage": "https://kyvshield-naruto.innolinkcloud.com/developer"
+    }
+  ]
+}
