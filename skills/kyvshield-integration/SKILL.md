@@ -184,6 +184,21 @@ Content-Type:          application/json
 User-Agent:            KyvShield-Webhook/1.0
 ```
 
+**Top-level fields (all events):**
+```
+event          String  - event name
+timestamp      String  - ISO 8601
+session_id     String  - KYC session ID
+app_id         String  - your application ID
+key_id         String  - API key used
+document_type  String  - target document (e.g. "SN-CIN", "SN-PASSPORT", "SN-DRIVER-LICENCE")
+```
+
+**Notes:**
+- `document_type` is present in ALL webhook events (step + session)
+- `warnings` in `step_data.verification` is currently always `[]` (empty array)
+- `display_priority` in extraction fields indicates sort order (1 = main identifier)
+
 **Signature verification:** HMAC-SHA256 of the raw body using the API key as secret. Compare with `X-KyvShield-Signature` header (strip `sha256=` prefix).
 
 ## Repositories

@@ -146,6 +146,7 @@ func webhookHandler(w http.ResponseWriter, r *http.Request) {
   "session_id": "7a4304a3e1c66c2405bcb72e661113bc",
   "app_id": "demo_app",
   "key_id": "demo_key_1",
+  "document_type": "SN-CIN",
   "step_data": {
     "captured_image": "/9j/4AAQSkZJRgABA....k+owORXRhJQspPY+clG...",
     "liveness": {
@@ -158,7 +159,7 @@ func webhookHandler(w http.ResponseWriter, r *http.Request) {
     "step_type": "selfie",
     "success": true,
     "user_messages": [
-      "Nous avons des raisons de penser que ce selfie n'est pas conforme."
+      "Selfie captur\u00e9 avec succ\u00e8s."
     ],
     "verification": {
       "checks_passed": [
@@ -184,6 +185,7 @@ func webhookHandler(w http.ResponseWriter, r *http.Request) {
   "session_id": "7a4304a3e1c66c2405bcb72e661113bc",
   "app_id": "demo_app",
   "key_id": "demo_key_1",
+  "document_type": "SN-CIN",
   "step_data": {
     "aligned_document": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBA....QwEaP...",
     "extracted_photos": [
@@ -202,84 +204,77 @@ func webhookHandler(w http.ResponseWriter, r *http.Request) {
         "document_key": "numero_carte",
         "label": "N\u00b0 de la carte d'identit\u00e9",
         "value": "1 06 19930515 00026 8",
-        "display_priority": 0
+        "display_priority": 1
       },
       {
         "key": "prenoms",
         "document_key": "prenoms",
         "label": "Pr\u00e9noms",
         "value": "MOUSSA",
-        "display_priority": 0
+        "display_priority": 2
       },
       {
         "key": "nom",
         "document_key": "nom",
         "label": "Nom",
         "value": "NDOUR",
-        "display_priority": 0
+        "display_priority": 3
       },
       {
         "key": "date_naissance",
         "document_key": "date_naissance",
         "label": "Date de naissance",
         "value": "1993-05-15",
-        "display_priority": 0
+        "display_priority": 4
       },
       {
         "key": "sexe",
         "document_key": "sexe",
         "label": "Sexe",
         "value": "M",
-        "display_priority": 0
+        "display_priority": 5
       },
       {
         "key": "taille",
         "document_key": "taille",
         "label": "Taille",
         "value": "175 cm",
-        "display_priority": 0
+        "display_priority": 6
       },
       {
         "key": "lieu_naissance",
         "document_key": "lieu_naissance",
         "label": "Lieu de naissance",
         "value": "KAOLACK",
-        "display_priority": 0
+        "display_priority": 7
       },
       {
         "key": "date_delivrance",
         "document_key": "date_delivrance",
         "label": "Date de d\u00e9livrance",
         "value": "2019-07-29",
-        "display_priority": 0
+        "display_priority": 8
       },
       {
         "key": "date_expiration",
         "document_key": "date_expiration",
         "label": "Date d'expiration",
         "value": "2029-07-28",
-        "display_priority": 0
+        "display_priority": 9
       },
       {
         "key": "centre_enregistrement",
         "document_key": "centre_enregistrement",
         "label": "Centre d'enregistrement",
         "value": "COMM. DE DIEUPPEUL",
-        "display_priority": 0
+        "display_priority": 10
       },
       {
         "key": "adresse_domicile",
         "document_key": "adresse_domicile",
         "label": "Adresse du domicile",
         "value": "ABATTOIRS",
-        "display_priority": 0
-      },
-      {
-        "key": "is_duplicata",
-        "document_key": "is_duplicata",
-        "label": "Carte DUPLICATA",
-        "value": "false",
-        "display_priority": 0
+        "display_priority": 11
       }
     ],
     "liveness": {
@@ -292,7 +287,7 @@ func webhookHandler(w http.ResponseWriter, r *http.Request) {
     "step_type": "recto",
     "success": true,
     "user_messages": [
-      "Nous avons des raisons de penser que ce document n'est pas conforme."
+      "Document analys\u00e9 avec succ\u00e8s."
     ],
     "verification": {
       "checks_passed": [
@@ -302,11 +297,7 @@ func webhookHandler(w http.ResponseWriter, r *http.Request) {
       "fraud_indicators": [],
       "is_authentic": true,
       "issues": [],
-      "warnings": [
-        "Carte physique authentique d\u00e9tect\u00e9e - tous les \u00e9l\u00e9ments de s\u00e9curit\u00e9 pr\u00e9sents.",
-        "Num\u00e9ro de carte valide (17 caract\u00e8res) - format conforme.",
-        "Carte valide jusqu'au 28/07/2029 - pas d'expiration."
-      ]
+      "warnings": []
     }
   }
 }
@@ -321,6 +312,7 @@ func webhookHandler(w http.ResponseWriter, r *http.Request) {
   "session_id": "7a4304a3e1c66c2405bcb72e661113bc",
   "app_id": "demo_app",
   "key_id": "demo_key_1",
+  "document_type": "SN-CIN",
   "step_data": {
     "aligned_document": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQ...",
     "extraction": [
@@ -329,28 +321,28 @@ func webhookHandler(w http.ResponseWriter, r *http.Request) {
         "document_key": "code_pays",
         "label": "Code Pays",
         "value": "SEN",
-        "display_priority": 0
+        "display_priority": 1
       },
       {
         "key": "inscrit_liste_electorale",
         "document_key": "inscrit_liste_electorale",
         "label": "Inscrit sur la liste \u00e9lectorale",
         "value": "false",
-        "display_priority": 0
+        "display_priority": 2
       },
       {
         "key": "nin",
         "document_key": "nin",
         "label": "NIN",
         "value": "1548199301837",
-        "display_priority": 0
+        "display_priority": 3
       },
       {
         "key": "mrz",
         "document_key": "mrz",
         "label": "MRZ",
         "value": "I<SEN1061993051500026B2<<<<<<<\n9305155M2907284SEN<<<<<<<<<<<<<4\nNDOUR<<MOUSSA<<<<<<<<<<<<<<<<<<<",
-        "display_priority": 0
+        "display_priority": 4
       }
     ],
     "liveness": {
@@ -363,7 +355,7 @@ func webhookHandler(w http.ResponseWriter, r *http.Request) {
     "step_type": "verso",
     "success": true,
     "user_messages": [
-      "Nous avons des raisons de penser que ce document n'est pas conforme."
+      "Document verso analys\u00e9 avec succ\u00e8s."
     ],
     "verification": {
       "checks_passed": [
@@ -373,11 +365,7 @@ func webhookHandler(w http.ResponseWriter, r *http.Request) {
       "fraud_indicators": [],
       "is_authentic": true,
       "issues": [],
-      "warnings": [
-        "Carte physique authentique d\u00e9tect\u00e9e en main.",
-        "Tous les \u00e9l\u00e9ments de s\u00e9curit\u00e9 pr\u00e9sents et conformes.",
-        "Donn\u00e9es MRZ et NIN coh\u00e9rentes avec le recto."
-      ]
+      "warnings": []
     }
   }
 }
@@ -392,18 +380,41 @@ func webhookHandler(w http.ResponseWriter, r *http.Request) {
   "session_id": "7a4304a3e1c66c2405bcb72e661113bc",
   "app_id": "demo_app",
   "key_id": "demo_key_1",
+  "document_type": "SN-CIN",
   "final_result": {
     "success": true,
     "status": "PASS",
+    "document_type": "SN-CIN",
     "steps": {
       "face_match_passed": true,
-      "face_match_score": 0,
+      "face_match_score": 87.5,
       "overall_confidence": 0.9666666666666667,
       "processing_time_ms": 8360,
       "rejection_reason": "",
       "steps_completed": 3,
       "steps_failed": 0,
       "steps_passed": 3
+    }
+  }
+}
+```
+
+### `session.failed`
+
+```json
+{
+  "event": "session.failed",
+  "timestamp": "2026-04-06T22:40:00Z",
+  "session_id": "abc123def456",
+  "app_id": "demo_app",
+  "key_id": "demo_key_1",
+  "document_type": "SN-CIN",
+  "final_result": {
+    "success": false,
+    "status": "TIMEOUT",
+    "document_type": "SN-CIN",
+    "steps": {
+      "reason": "session_expired"
     }
   }
 }
@@ -420,6 +431,7 @@ func webhookHandler(w http.ResponseWriter, r *http.Request) {
 | `session_id` | string | KYC session identifier |
 | `app_id` | string | Your application ID |
 | `key_id` | string | API key identifier used |
+| `document_type` | string | Target document type (`SN-CIN`, `SN-PASSPORT`, `SN-DRIVER-LICENCE`) |
 | `step_data.step_type` | string | `selfie`, `recto`, or `verso` |
 | `step_data.step_index` | int | 0-based step index |
 | `step_data.success` | bool | Whether step passed |
@@ -438,7 +450,7 @@ func webhookHandler(w http.ResponseWriter, r *http.Request) {
 | `step_data.verification.checks_passed` | array | Passed verification checks |
 | `step_data.verification.fraud_indicators` | array | Detected fraud signals |
 | `step_data.verification.issues` | array | Blocking issues |
-| `step_data.verification.warnings` | array | Non-blocking warnings |
+| `step_data.verification.warnings` | array | Non-blocking warnings (currently always `[]`) |
 | `step_data.user_messages` | array | Localized messages for end user |
 
 ### Session events (`session.*`)
@@ -450,8 +462,10 @@ func webhookHandler(w http.ResponseWriter, r *http.Request) {
 | `session_id` | string | KYC session identifier |
 | `app_id` | string | Your application ID |
 | `key_id` | string | API key identifier used |
+| `document_type` | string | Target document type (`SN-CIN`, `SN-PASSPORT`, `SN-DRIVER-LICENCE`) |
 | `final_result.success` | bool | Overall KYC success |
-| `final_result.status` | string | `PASS` or `REJECT` |
+| `final_result.status` | string | `PASS`, `REJECT`, or `TIMEOUT` |
+| `final_result.document_type` | string | Target document type (same as top-level) |
 | `final_result.steps.steps_completed` | int | Total steps completed |
 | `final_result.steps.steps_passed` | int | Steps that passed |
 | `final_result.steps.steps_failed` | int | Steps that failed |
@@ -467,16 +481,18 @@ If your endpoint does not return a `2xx` status code, KyvShield retries delivery
 
 | Attempt | Delay |
 |---------|-------|
-| 1st retry | ~10 seconds |
-| 2nd retry | ~60 seconds |
-| 3rd retry | ~5 minutes |
+| 1st retry | ~1 second |
+| 2nd retry | ~5 seconds |
+| 3rd retry | ~30 seconds |
 
-After 3 failed retries, the webhook is dropped. You can query the session status via the REST API if you missed a webhook.
+After 3 failed retries, the webhook failure is stored for 24 hours. You can query the session status via the REST API if you missed a webhook.
 
 ## Best Practices
 
 - **Always verify the signature** before processing the payload to prevent spoofed requests.
 - **Respond quickly** with a `200 OK` and process asynchronously. Webhook requests timeout after 10 seconds.
 - **Use the session ID** (`X-Kyvshield-Session` header or `session_id` field) to correlate step events with the final session result.
+- **Use `document_type`** to know which document was verified (e.g., `SN-CIN`, `SN-PASSPORT`). Present in all webhook events.
 - **Handle idempotency** -- in rare cases a webhook may be delivered more than once. Use the session ID + event type as a deduplication key.
 - **Store raw payloads** for debugging and audit trails.
+- **`warnings` field** is currently always an empty array `[]` in webhook payloads.
