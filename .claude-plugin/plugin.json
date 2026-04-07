@@ -7,9 +7,6 @@
     "url": "https://innolink.sn"
   },
   "homepage": "https://kyvshield-naruto.innolinkcloud.com/developer",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/moussa-innolink/kyv_llm_skill"
-  },
+  "repository": "https://github.com/moussa-innolink/kyv_llm_skill",
   "license": "MIT"
 }
