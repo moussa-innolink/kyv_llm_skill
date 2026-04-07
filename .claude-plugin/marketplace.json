@@ -1,18 +1,24 @@
 {
-  "name": "kyvshield-marketplace",
+  "name": "kyvshield-plugins",
   "owner": {
     "name": "InnoLink",
-    "url": "https://innolink.sn"
+    "email": "dev@innolink.sn"
+  },
+  "metadata": {
+    "description": "KyvShield KYC SDK integration plugins for Claude Code"
   },
   "plugins": [
     {
       "name": "kyvshield",
-      "description": "KyvShield KYC SDK integration — teaches Claude to integrate identity verification into Web, Flutter, Android, iOS, and React Native apps.",
+      "source": "./",
+      "description": "KyvShield KYC SDK integration — teaches Claude to integrate identity verification into Web, Flutter, Android, iOS, and React Native apps. Includes webhook handling.",
       "version": "1.0.0",
-      "source": {
-        "type": "local",
-        "path": "."
-      }
+      "author": {
+        "name": "InnoLink"
+      },
+      "homepage": "https://kyvshield-naruto.innolinkcloud.com/developer",
+      "keywords": ["kyc", "identity-verification", "liveness", "ocr", "face-matching"],
+      "category": "integration"
     }
   ]
 }
