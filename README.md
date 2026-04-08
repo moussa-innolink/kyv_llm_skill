@@ -45,5 +45,5 @@ KyvShield provides complete identity verification (KYC):
 
 ## Documentation
 
-- [Developer documentation](https://kyvshield-naruto.innolinkcloud.com/developer)
+- [Developer documentation](https://kyvshield.innolink.sn/developer)
 - [Plugin on GitHub](https://github.com/moussa-innolink/kyv_llm_skill)
