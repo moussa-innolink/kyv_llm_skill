@@ -12,28 +12,28 @@
         "document_key": "code_pays",
         "label": "Code Pays",
         "value": "SEN",
-        "display_priority": 0
+        "display_priority": 1
       },
       {
         "key": "inscrit_liste_electorale",
         "document_key": "inscrit_liste_electorale",
         "label": "Inscrit sur la liste électorale",
         "value": "false",
-        "display_priority": 0
+        "display_priority": 2
       },
       {
         "key": "nin",
         "document_key": "nin",
         "label": "NIN",
         "value": "1548199301837",
-        "display_priority": 0
+        "display_priority": 3
       },
       {
         "key": "mrz",
         "document_key": "mrz",
         "label": "MRZ",
         "value": "I<SEN1061993051500026B2<<<<<<<\n9305155M2907284SEN<<<<<<<<<<<<<4\nNDOUR<<MOUSSA<<<<<<<<<<<<<<<<<<<",
-        "display_priority": 0
+        "display_priority": 4
       }
     ],
     "liveness": {

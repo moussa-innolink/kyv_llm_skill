@@ -27,84 +27,84 @@
         "document_key": "numero_carte",
         "label": "N° de la carte d'identité",
         "value": "1 06 19930515 00026 8",
-        "display_priority": 0
+        "display_priority": 1
       },
       {
         "key": "prenoms",
         "document_key": "prenoms",
         "label": "Prénoms",
         "value": "MOUSSA",
-        "display_priority": 0
+        "display_priority": 2
       },
       {
         "key": "nom",
         "document_key": "nom",
         "label": "Nom",
         "value": "NDOUR",
-        "display_priority": 0
+        "display_priority": 3
       },
       {
         "key": "date_naissance",
         "document_key": "date_naissance",
         "label": "Date de naissance",
         "value": "1993-05-15",
-        "display_priority": 0
+        "display_priority": 4
       },
       {
         "key": "sexe",
         "document_key": "sexe",
         "label": "Sexe",
         "value": "M",
-        "display_priority": 0
+        "display_priority": 5
       },
       {
         "key": "taille",
         "document_key": "taille",
         "label": "Taille",
         "value": "175 cm",
-        "display_priority": 0
+        "display_priority": 6
       },
       {
         "key": "lieu_naissance",
         "document_key": "lieu_naissance",
         "label": "Lieu de naissance",
         "value": "KAOLACK",
-        "display_priority": 0
+        "display_priority": 7
       },
       {
         "key": "date_delivrance",
         "document_key": "date_delivrance",
         "label": "Date de délivrance",
         "value": "2019-07-29",
-        "display_priority": 0
+        "display_priority": 8
       },
       {
         "key": "date_expiration",
         "document_key": "date_expiration",
         "label": "Date d'expiration",
         "value": "2029-07-28",
-        "display_priority": 0
+        "display_priority": 9
       },
       {
         "key": "centre_enregistrement",
         "document_key": "centre_enregistrement",
         "label": "Centre d'enregistrement",
         "value": "COMM. DE DIEUPPEUL",
-        "display_priority": 0
+        "display_priority": 10
       },
       {
         "key": "adresse_domicile",
         "document_key": "adresse_domicile",
         "label": "Adresse du domicile",
         "value": "ABATTOIRS",
-        "display_priority": 0
+        "display_priority": 11
       },
       {
         "key": "is_duplicata",
         "document_key": "is_duplicata",
         "label": "Carte DUPLICATA",
         "value": "false",
-        "display_priority": 0
+        "display_priority": 12
       }
     ],
     "liveness": {

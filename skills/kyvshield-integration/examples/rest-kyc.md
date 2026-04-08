@@ -110,7 +110,7 @@ curl -X POST https://kyvshield-naruto.innolinkcloud.com/api/v1/kyc/verify \
       "step_type": "selfie",
       "success": true,
       "liveness": { "is_live": true, "score": 0.98, "confidence": "HIGH" },
-      "verification": { "is_authentic": true, "confidence": 0.98, "checks_passed": 4 },
+      "verification": { "is_authentic": true, "confidence": 0.98, "checks_passed": ["center_face", "close_eyes", "turn_left", "turn_right"] },
       "captured_image": "base64...",
       "processing_time_ms": 2100
     },
@@ -124,16 +124,21 @@ curl -X POST https://kyvshield-naruto.innolinkcloud.com/api/v1/kyc/verify \
         {"key": "document_id", "document_key": "numero_carte", "label": "N carte", "value": "1 06 19930515 00026 8", "display_priority": 1},
         {"key": "first_name", "document_key": "prenoms", "label": "Prenoms", "value": "MOUSSA", "display_priority": 2}
       ],
-      "extracted_photos": [{"confidence": 0.85, "bbox": [94, 218, 210, 371]}],
+      "extracted_photos": [{"image": "base64...", "confidence": 0.85, "bbox": [94, 218, 210, 371], "area": 17748, "width": 116, "height": 153}],
       "processing_time_ms": 5200
     },
     {
       "step_index": 2,
       "step_type": "verso",
       "success": true,
+      "liveness": { "is_live": true, "score": 0.95, "confidence": "HIGH" },
+      "aligned_document": "base64...",
       "extraction": [
-        {"key": "national_id", "document_key": "nin", "label": "NIN", "value": "1548199301837", "display_priority": 1}
+        {"key": "nin", "document_key": "nin", "label": "NIN", "value": "1548199301837", "display_priority": 1},
+        {"key": "mrz", "document_key": "mrz", "label": "MRZ", "value": "I<SEN1061993...", "display_priority": 2},
+        {"key": "code_pays", "document_key": "code_pays", "label": "Code Pays", "value": "SEN", "display_priority": 3}
       ],
+      "verification": { "is_authentic": true, "confidence": 0.95, "checks_passed": ["center_document"] },
       "processing_time_ms": 4800
     }
   ],
