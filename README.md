@@ -6,8 +6,10 @@ Use Claude Code to automatically integrate KyvShield into your project. This plu
 
 Install the plugin in Claude Code:
 
-```bash
-/install-plugin https://github.com/moussa-innolink/kyv_llm_skill
+```
+/plugin marketplace add moussa-innolink/kyv_llm_skill
+/plugin install kyvshield@kyvshield-plugins
+/reload-plugins
 ```
 
 Then ask Claude:
