@@ -1,0 +1,21 @@
+{
+  "event": "session.completed",
+  "timestamp": "2026-04-06T22:38:24Z",
+  "session_id": "7a4304a3e1c66c2405bcb72e661113bc",
+  "app_id": "demo_app",
+  "key_id": "demo_key_1",
+  "final_result": {
+    "success": true,
+    "status": "PASS",
+    "steps": {
+      "face_match_passed": true,
+      "face_match_score": 0,
+      "overall_confidence": 0.9666666666666667,
+      "processing_time_ms": 8360,
+      "rejection_reason": "",
+      "steps_completed": 3,
+      "steps_failed": 0,
+      "steps_passed": 3
+    }
+  }
+}

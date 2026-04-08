@@ -43,6 +43,12 @@ For platform-specific code examples, see the supporting files:
 - [iOS/Swift integration](examples/swift.md)
 - [React Native integration](examples/reactnative.md)
 - [Webhook handling](examples/webhooks.md)
+- [REST KYC API](examples/rest-kyc.md)
+- [REST API response example](examples/response_rest_recto_minimal.json)
+- [Webhook recto.completed example](examples/webhook_recto.json)
+- [Webhook selfie.completed example](examples/webhook_selfie.json)
+- [Webhook verso.completed example](examples/webhook_verso.json)
+- [Webhook session.completed example](examples/webhook_session.json)
 
 ## Configuration Reference
 
@@ -167,6 +173,73 @@ width        int
 height       int
 bbox         double[]      - bounding box [x1, y1, x2, y2]
 ```
+
+## REST KYC API (Server-to-Server)
+
+For server-to-server KYC without SDK/WebSocket, use the REST API. Same pipeline, single HTTP request.
+
+### `GET /api/v1/challenges`
+Returns available challenge types per mode. **Call this first** to know what images to provide for each step.
+
+Response:
+```json
+{
+  "challenges": {
+    "document": {
+      "minimal": ["center_document"],
+      "standard": ["center_document", "tilt_left", "tilt_right"],
+      "strict": ["center_document", "tilt_left", "tilt_right", "tilt_forward", "tilt_back"]
+    },
+    "selfie": {
+      "minimal": ["center_face", "close_eyes"],
+      "standard": ["center_face", "close_eyes", "turn_left", "turn_right"],
+      "strict": ["center_face", "close_eyes", "turn_left", "turn_right", "smile", "look_up", "look_down"]
+    }
+  }
+}
+```
+
+### `POST /api/v1/kyc/verify`
+Multipart form. **One image per challenge** (not per step).
+
+**Parameters:**
+```
+steps                   JSON array (required)  ["selfie","recto","verso"]
+target                  String (required)      "SN-CIN" | "SN-PASSPORT" | "SN-DRIVER-LICENCE"
+language                String (required)      "fr" | "en" | "wo"
+selfie_challenge_mode   String (required if selfie)  "minimal" | "standard" | "strict"
+recto_challenge_mode    String (required if recto)   "minimal" | "standard" | "strict"
+verso_challenge_mode    String (required if verso)   "minimal" | "standard" | "strict"
+require_face_match      String (optional)      "true"
+kyc_identifier          String (optional)      your reference ID
+```
+
+**Images (one per challenge, named `{step}_{challenge}`):**
+```
+# Selfie challenges (depends on selfie_challenge_mode)
+selfie_center_face      File   JPEG — face centered, looking at camera
+selfie_close_eyes       File   JPEG — eyes closed
+selfie_turn_left        File   JPEG — head turned left (standard+)
+selfie_turn_right       File   JPEG — head turned right (standard+)
+selfie_smile            File   JPEG — smiling (strict only)
+selfie_look_up          File   JPEG — looking up (strict only)
+selfie_look_down        File   JPEG — looking down (strict only)
+
+# Document challenges (depends on recto/verso_challenge_mode)
+recto_center_document   File   JPEG — document flat, centered
+recto_tilt_left         File   JPEG — document tilted left (standard+)
+recto_tilt_right        File   JPEG — document tilted right (standard+)
+verso_center_document   File   JPEG — document back, flat
+```
+
+**Pipeline:** auth → quota → billing → validate poses (MediaPipe for selfie, corners for document) → align document → LLM analysis → face match → webhooks → identity registry
+
+**Server-side validation:**
+- Selfie images validated via Python MediaPipe (head pose, eye aspect ratio, smile detection)
+- Document images validated via Python corner detection (perspective ratios)
+- If validation fails for any challenge, the step is rejected before LLM analysis
+
+See [rest-kyc.md](examples/rest-kyc.md) for full curl/Python/Node.js examples.
 
 ## Webhooks
 

@@ -1,0 +1,66 @@
+{
+  "event": "verso.completed",
+  "timestamp": "2026-04-06T22:38:24Z",
+  "session_id": "7a4304a3e1c66c2405bcb72e661113bc",
+  "app_id": "demo_app",
+  "key_id": "demo_key_1",
+  "step_data": {
+    "aligned_document": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQ...M4HtRXhVK8pSue/Rp8sLH/2Q==",
+    "extraction": [
+      {
+        "key": "code_pays",
+        "document_key": "code_pays",
+        "label": "Code Pays",
+        "value": "SEN",
+        "display_priority": 0
+      },
+      {
+        "key": "inscrit_liste_electorale",
+        "document_key": "inscrit_liste_electorale",
+        "label": "Inscrit sur la liste électorale",
+        "value": "false",
+        "display_priority": 0
+      },
+      {
+        "key": "nin",
+        "document_key": "nin",
+        "label": "NIN",
+        "value": "1548199301837",
+        "display_priority": 0
+      },
+      {
+        "key": "mrz",
+        "document_key": "mrz",
+        "label": "MRZ",
+        "value": "I<SEN1061993051500026B2<<<<<<<\n9305155M2907284SEN<<<<<<<<<<<<<4\nNDOUR<<MOUSSA<<<<<<<<<<<<<<<<<<<",
+        "display_priority": 0
+      }
+    ],
+    "liveness": {
+      "confidence": "HIGH",
+      "is_live": true,
+      "score": 0.95
+    },
+    "processing_time_ms": 8360,
+    "step_index": 2,
+    "step_type": "verso",
+    "success": true,
+    "user_messages": [
+      "Nous avons des raisons de penser que ce document n'est pas conforme."
+    ],
+    "verification": {
+      "checks_passed": [
+        "center_document"
+      ],
+      "confidence": 0.95,
+      "fraud_indicators": [],
+      "is_authentic": true,
+      "issues": [],
+      "warnings": [
+        "Carte physique authentique détectée en main.",
+        "Tous les éléments de sécurité présents et conformes.",
+        "Données MRZ et NIN cohérentes avec le recto."
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "event": "selfie.completed",
+  "timestamp": "2026-04-06T22:37:55Z",
+  "session_id": "7a4304a3e1c66c2405bcb72e661113bc",
+  "app_id": "demo_app",
+  "key_id": "demo_key_1",
+  "step_data": {
+    "captured_image": "/9j/4AAQSkZJRgABA....k+owORXRhJQspPY+clGHPZu0e/6H/9k=",
+    "liveness": {
+      "confidence": "HIGH",
+      "is_live": true,
+      "score": 1
+    },
+    "processing_time_ms": 2146,
+    "step_index": 0,
+    "step_type": "selfie",
+    "success": true,
+    "user_messages": [
+      "Nous avons des raisons de penser que ce selfie n'est pas conforme."
+    ],
+    "verification": {
+      "checks_passed": [
+        "center_face",
+        "close_eyes"
+      ],
+      "confidence": 1,
+      "fraud_indicators": [],
+      "is_authentic": true,
+      "issues": [],
+      "warnings": []
+    }
+  }
+}

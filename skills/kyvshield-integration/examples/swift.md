@@ -18,7 +18,7 @@ Or add it to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/moussa-innolink/kyv_swift.git", from: "0.0.3"),
+    .package(url: "https://github.com/moussa-innolink/kyv_swift.git", from: "0.0.4"),
 ]
 ```
 

@@ -1,0 +1,161 @@
+{
+  "overall_confidence": 0.009899999999999999,
+  "overall_status": "reject",
+  "processing_time_ms": 26965,
+  "session_id": "5eb88075f8205c87aa924037dcc32eff",
+  "steps": [
+    {
+      "aligned_document": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAcHBwcI...[574964]",
+      "extracted_photos": [
+        {
+          "image": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMC...[33740]",
+          "confidence": 0.8656083345413208,
+          "bbox": [
+            486,
+            844,
+            838,
+            1296
+          ],
+          "area": 159104,
+          "width": 352,
+          "height": 452
+        },
+        {
+          "image": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMC...[8400]",
+          "confidence": 0.7472140789031982,
+          "bbox": [
+            2483,
+            1117,
+            2650,
+            1329
+          ],
+          "area": 35404,
+          "width": 167,
+          "height": 212
+        }
+      ],
+      "extraction": [
+        {
+          "display_priority": 0,
+          "document_key": "numero_carte",
+          "icon": "",
+          "key": "numero_carte",
+          "label": "N° de la carte d'identité",
+          "value": "1 06 19930515 00026 8"
+        },
+        {
+          "display_priority": 0,
+          "document_key": "prenoms",
+          "icon": "",
+          "key": "prenoms",
+          "label": "Prénoms",
+          "value": "MOUSSA"
+        },
+        {
+          "display_priority": 0,
+          "document_key": "nom",
+          "icon": "",
+          "key": "nom",
+          "label": "Nom",
+          "value": "NDOUR"
+        },
+        {
+          "display_priority": 0,
+          "document_key": "date_naissance",
+          "icon": "",
+          "key": "date_naissance",
+          "label": "Date de naissance",
+          "value": "15/05/1993"
+        },
+        {
+          "display_priority": 0,
+          "document_key": "sexe",
+          "icon": "",
+          "key": "sexe",
+          "label": "Sexe",
+          "value": "M"
+        },
+        {
+          "display_priority": 0,
+          "document_key": "taille",
+          "icon": "",
+          "key": "taille",
+          "label": "Taille",
+          "value": "175 cm"
+        },
+        {
+          "display_priority": 0,
+          "document_key": "lieu_naissance",
+          "icon": "",
+          "key": "lieu_naissance",
+          "label": "Lieu de naissance",
+          "value": "KAOLACK"
+        },
+        {
+          "display_priority": 0,
+          "document_key": "date_delivrance",
+          "icon": "",
+          "key": "date_delivrance",
+          "label": "Date de délivrance",
+          "value": "29/07/2019"
+        },
+        {
+          "display_priority": 0,
+          "document_key": "date_expiration",
+          "icon": "",
+          "key": "date_expiration",
+          "label": "Date d'expiration",
+          "value": "28/07/2029"
+        },
+        {
+          "display_priority": 0,
+          "document_key": "centre_enregistrement",
+          "icon": "",
+          "key": "centre_enregistrement",
+          "label": "Centre d'enregistrement",
+          "value": "COMM. DE DIEUPEUL"
+        },
+        {
+          "display_priority": 0,
+          "document_key": "adresse_domicile",
+          "icon": "",
+          "key": "adresse_domicile",
+          "label": "Adresse du domicile",
+          "value": "ABATTOIRS"
+        },
+        {
+          "display_priority": 0,
+          "document_key": "is_duplicata",
+          "icon": "",
+          "key": "is_duplicata",
+          "label": "Carte DUPLICATA",
+          "value": "false"
+        }
+      ],
+      "liveness": {
+        "confidence": "LOW",
+        "is_live": true,
+        "score": 0.009899999999999999
+      },
+      "processing_time_ms": 26923,
+      "step_index": 0,
+      "step_type": "recto",
+      "success": false,
+      "user_messages": [
+        "Document authentique - Carte d'identité CEDEAO Sénégal valide",
+        "Tous les éléments de sécurité sont présents et conformes",
+        "Aucune trace de tamponnage ou d'altération détectée",
+        "Carte valide jusqu'au 28 juillet 2029",
+        "Identité: MOUSSA NDOUR (né le 15/05/1993)"
+      ],
+      "verification": {
+        "confidence": 0.009899999999999999,
+        "fraud_indicators": [],
+        "is_authentic": true,
+        "issues": [],
+        "warnings": []
+      }
+    }
+  ],
+  "success": false
+}
