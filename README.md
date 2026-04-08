@@ -1,47 +1,47 @@
 # KyvShield LLM Skills Plugin
 
-Utilisez Claude Code pour integrer KyvShield automatiquement dans votre projet. Le plugin donne a Claude toute la documentation, les exemples et les types SDK.
+Use Claude Code to automatically integrate KyvShield into your project. This plugin gives Claude all the documentation, examples, and SDK types it needs.
 
 ## Installation
 
-Installez le plugin dans Claude Code :
+Install the plugin in Claude Code:
 
 ```bash
 /install-plugin https://github.com/moussa-innolink/kyv_llm_skill
 ```
 
-Puis demandez a Claude :
+Then ask Claude:
 
 ```
-"Integre KyvShield dans mon app Flutter"
+"Integrate KyvShield into my Flutter app"
 "Add KYC verification to my Android app"
 "Help me handle KyvShield webhooks in Node.js"
 "Set up REST KYC verification server-to-server"
 ```
 
-## Skills disponibles
+## Available Skills
 
 | Skill | Description |
 |-------|-------------|
-| `/kyvshield flutter` | Integration Flutter/Dart |
-| `/kyvshield android` | Integration Android/Kotlin |
-| `/kyvshield swift` | Integration iOS/Swift |
-| `/kyvshield web` | Integration Web (CDN) |
-| `/kyvshield reactnative` | Integration React Native |
-| `/kyvshield webhooks` | Configuration des webhooks |
-| `/kyvshield rest-kyc` | API REST KYC (server-to-server) |
+| `/kyvshield flutter` | Flutter/Dart integration |
+| `/kyvshield android` | Android/Kotlin integration |
+| `/kyvshield swift` | iOS/Swift integration |
+| `/kyvshield web` | Web integration (CDN) |
+| `/kyvshield reactnative` | React Native integration |
+| `/kyvshield webhooks` | Webhook configuration |
+| `/kyvshield rest-kyc` | REST KYC API (server-to-server) |
 
-## Ce que fait KyvShield
+## What KyvShield Does
 
-KyvShield fournit une verification d'identite (KYC) complete :
+KyvShield provides complete identity verification (KYC):
 
-- **Liveness selfie** — detection anti-spoofing (yeux fermes, tourner la tete, sourire)
-- **Capture de document** — OCR automatique (CIN, passeport, permis de conduire)
-- **Face matching** — comparaison selfie vs photo du document
-- **Multi-langue** — Francais, Anglais, Wolof
-- **REST API** — Verification server-to-server sans SDK
+- **Selfie liveness** — anti-spoofing detection (close eyes, turn head, smile)
+- **Document capture** — automatic OCR (ID cards, passports, driver licenses)
+- **Face matching** — selfie vs document photo comparison
+- **Multi-language** — French, English, Wolof
+- **REST API** — server-to-server verification without SDK
 
 ## Documentation
 
-- [Documentation developpeur](https://kyvshield-naruto.innolinkcloud.com/developer)
-- [Plugin sur GitHub](https://github.com/moussa-innolink/kyv_llm_skill)
+- [Developer documentation](https://kyvshield-naruto.innolinkcloud.com/developer)
+- [Plugin on GitHub](https://github.com/moussa-innolink/kyv_llm_skill)
