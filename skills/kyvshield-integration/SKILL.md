@@ -207,9 +207,10 @@ Multipart form. **One image per challenge** (not per step).
 steps                   JSON array (required)  ["selfie","recto","verso"]
 target                  String (required)      "SN-CIN" | "SN-PASSPORT" | "SN-DRIVER-LICENCE"
 language                String (required)      "fr" | "en" | "wo"
-selfie_challenge_mode   String (required if selfie)  "minimal" | "standard" | "strict"
-recto_challenge_mode    String (required if recto)   "minimal" | "standard" | "strict"
-verso_challenge_mode    String (required if verso)   "minimal" | "standard" | "strict"
+challenge_mode          String (required)      "minimal" | "standard" | "strict" (global default)
+selfie_challenge_mode   String (optional)      override for selfie step
+recto_challenge_mode    String (optional)      override for recto step
+verso_challenge_mode    String (optional)      override for verso step
 require_face_match      String (optional)      "true"
 kyc_identifier          String (optional)      your reference ID
 ```
