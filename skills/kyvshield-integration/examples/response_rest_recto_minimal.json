@@ -1,155 +1,131 @@
 {
-  "overall_confidence": 0.009899999999999999,
+  "overall_confidence": 0.0098,
   "overall_status": "reject",
-  "processing_time_ms": 26965,
-  "session_id": "5eb88075f8205c87aa924037dcc32eff",
+  "processing_time_ms": 8271,
+  "session_id": "b852f83924a94c06b11bc71c6f63ef09",
   "steps": [
     {
-      "aligned_document": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAcHBwcI...[574964]",
+      "aligned_document": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEB...[264156 chars]",
       "extracted_photos": [
         {
-          "image": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMC...[33740]",
-          "confidence": 0.8656083345413208,
+          "image": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMC...[7580 chars]",
+          "confidence": 0.8300036787986755,
           "bbox": [
-            486,
-            844,
-            838,
-            1296
+            96,
+            217,
+            209,
+            370
           ],
-          "area": 159104,
-          "width": 352,
-          "height": 452
-        },
-        {
-          "image": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMC...[8400]",
-          "confidence": 0.7472140789031982,
-          "bbox": [
-            2483,
-            1117,
-            2650,
-            1329
-          ],
-          "area": 35404,
-          "width": 167,
-          "height": 212
+          "area": 17289,
+          "width": 113,
+          "height": 153
         }
       ],
       "extraction": [
         {
-          "display_priority": 0,
-          "document_key": "numero_carte",
-          "icon": "",
           "key": "numero_carte",
+          "document_key": "numero_carte",
           "label": "N° de la carte d'identité",
-          "value": "1 06 19930515 00026 8"
+          "value": "1 06 19930515 00026 8",
+          "display_priority": 1
         },
         {
-          "display_priority": 0,
-          "document_key": "prenoms",
-          "icon": "",
           "key": "prenoms",
+          "document_key": "prenoms",
           "label": "Prénoms",
-          "value": "MOUSSA"
+          "value": "MOUSSA",
+          "display_priority": 2
         },
         {
-          "display_priority": 0,
-          "document_key": "nom",
-          "icon": "",
           "key": "nom",
+          "document_key": "nom",
           "label": "Nom",
-          "value": "NDOUR"
+          "value": "NDOUR",
+          "display_priority": 3
         },
         {
-          "display_priority": 0,
-          "document_key": "date_naissance",
-          "icon": "",
           "key": "date_naissance",
+          "document_key": "date_naissance",
           "label": "Date de naissance",
-          "value": "15/05/1993"
+          "value": "1993-05-15",
+          "display_priority": 4
         },
         {
-          "display_priority": 0,
-          "document_key": "sexe",
-          "icon": "",
           "key": "sexe",
+          "document_key": "sexe",
           "label": "Sexe",
-          "value": "M"
+          "value": "M",
+          "display_priority": 5
         },
         {
-          "display_priority": 0,
-          "document_key": "taille",
-          "icon": "",
           "key": "taille",
+          "document_key": "taille",
           "label": "Taille",
-          "value": "175 cm"
+          "value": "175 cm",
+          "display_priority": 6
         },
         {
-          "display_priority": 0,
-          "document_key": "lieu_naissance",
-          "icon": "",
           "key": "lieu_naissance",
+          "document_key": "lieu_naissance",
           "label": "Lieu de naissance",
-          "value": "KAOLACK"
+          "value": "KAOLACK",
+          "display_priority": 7
         },
         {
-          "display_priority": 0,
-          "document_key": "date_delivrance",
-          "icon": "",
           "key": "date_delivrance",
+          "document_key": "date_delivrance",
           "label": "Date de délivrance",
-          "value": "29/07/2019"
+          "value": "2019-07-29",
+          "display_priority": 8
         },
         {
-          "display_priority": 0,
-          "document_key": "date_expiration",
-          "icon": "",
           "key": "date_expiration",
+          "document_key": "date_expiration",
           "label": "Date d'expiration",
-          "value": "28/07/2029"
+          "value": "2029-07-28",
+          "display_priority": 9
         },
         {
-          "display_priority": 0,
-          "document_key": "centre_enregistrement",
-          "icon": "",
           "key": "centre_enregistrement",
+          "document_key": "centre_enregistrement",
           "label": "Centre d'enregistrement",
-          "value": "COMM. DE DIEUPEUL"
+          "value": "COMM. DE DIEUPPEUL",
+          "display_priority": 10
         },
         {
-          "display_priority": 0,
-          "document_key": "adresse_domicile",
-          "icon": "",
           "key": "adresse_domicile",
+          "document_key": "adresse_domicile",
           "label": "Adresse du domicile",
-          "value": "ABATTOIRS"
+          "value": "ABATTOIRS",
+          "display_priority": 11
         },
         {
-          "display_priority": 0,
-          "document_key": "is_duplicata",
-          "icon": "",
           "key": "is_duplicata",
+          "document_key": "is_duplicata",
           "label": "Carte DUPLICATA",
-          "value": "false"
+          "value": "false",
+          "display_priority": 12
         }
       ],
       "liveness": {
         "confidence": "LOW",
         "is_live": true,
-        "score": 0.009899999999999999
+        "score": 0.0098
       },
-      "processing_time_ms": 26923,
+      "processing_time_ms": 8105,
       "step_index": 0,
       "step_type": "recto",
       "success": false,
       "user_messages": [
-        "Document authentique - Carte d'identité CEDEAO Sénégal valide",
-        "Tous les éléments de sécurité sont présents et conformes",
-        "Aucune trace de tamponnage ou d'altération détectée",
-        "Carte valide jusqu'au 28 juillet 2029",
-        "Identité: MOUSSA NDOUR (né le 15/05/1993)"
+        "Carte physique authentique détectée avec tous les éléments de sécurité visibles.",
+        "Tous les champs requis sont lisibles et valides. Carte valide jusqu'au 28/07/2029.",
+        "Aucun signe de falsification ou de tampering détecté."
       ],
       "verification": {
-        "confidence": 0.009899999999999999,
+        "checks_passed": [
+          "center_document"
+        ],
+        "confidence": 0.0098,
         "fraud_indicators": [],
         "is_authentic": true,
         "issues": [],
