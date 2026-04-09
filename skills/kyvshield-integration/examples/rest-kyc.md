@@ -280,3 +280,18 @@ If validation fails, the API returns an error with details about which challenge
 - **Billing**: Charged upfront at request time (same as SDK)
 - **Document alignment**: Server aligns document automatically before LLM analysis
 - **Heatmap**: Fraud detection heatmap generated automatically for document steps
+- **Batch**: `verifyBatch()` supports up to 10 concurrent verifications
+
+## Server SDKs
+
+Typed, self-contained SDKs for server-to-server integration:
+
+| Language | Install |
+|----------|---------|
+| Node.js/TypeScript | `npm install @kyvshield/rest-sdk` |
+| PHP | `composer require kyvshield/rest-sdk` |
+| Java | JitPack: `com.github.moussa-innolink.kyv_shield_restfull:java:1.0.0` |
+| Kotlin | JitPack: `com.github.moussa-innolink.kyv_shield_restfull:kotlin:1.0.0` |
+| Go | `go get github.com/moussa-innolink/kyv_shield_restfull/go` |
+
+Source: [github.com/moussa-innolink/kyv_shield_restfull](https://github.com/moussa-innolink/kyv_shield_restfull)

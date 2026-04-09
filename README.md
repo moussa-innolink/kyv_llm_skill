@@ -42,8 +42,22 @@ KyvShield provides complete identity verification (KYC):
 - **Face matching** — selfie vs document photo comparison
 - **Multi-language** — French, English, Wolof
 - **REST API** — server-to-server verification without SDK
+- **Server SDKs** — typed REST clients for Node.js, PHP, Java, Kotlin, Go with batch support
+
+## Server SDKs (REST API)
+
+For server-to-server KYC verification (no camera/UI needed):
+
+| Language | Install |
+|----------|---------|
+| Node.js/TypeScript | `npm install @kyvshield/rest-sdk` |
+| PHP | `composer require kyvshield/rest-sdk` |
+| Java | JitPack: `com.github.moussa-innolink.kyv_shield_restfull:java:1.0.0` |
+| Kotlin | JitPack: `com.github.moussa-innolink.kyv_shield_restfull:kotlin:1.0.0` |
+| Go | `go get github.com/moussa-innolink/kyv_shield_restfull/go` |
 
 ## Documentation
 
 - [Developer documentation](https://kyvshield.innolink.sn/developer)
+- [Server SDKs](https://github.com/moussa-innolink/kyv_shield_restfull)
 - [Plugin on GitHub](https://github.com/moussa-innolink/kyv_llm_skill)

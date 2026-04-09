@@ -8,9 +8,9 @@ argument-hint: [platform] [task]
 
 You are an expert at integrating the KyvShield KYC SDK. KyvShield provides identity verification with selfie liveness detection, document OCR, and face matching.
 
-## Platforms
+## Client SDKs (Mobile & Web)
 
-KyvShield is available on 5 platforms. All share the same API surface and result types.
+KyvShield client SDKs for end-user facing apps (camera, liveness challenges, UI).
 
 | Platform | Package | Install |
 |---|---|---|
@@ -19,6 +19,20 @@ KyvShield is available on 5 platforms. All share the same API surface and result
 | **Android** | JitPack | `com.github.moussa-innolink:kyv_android:0.0.4` |
 | **iOS** | SPM | `github.com/moussa-innolink/kyv_swift` version `0.0.4` |
 | **React Native** | npm | `@kyvshield/react-native-lite@0.0.4` |
+
+## Server SDKs (REST API — Batch KYC)
+
+Server-to-server SDKs for backend integration. No camera, no UI — send images via REST API. Supports batch verification (up to 10 concurrent).
+
+| Language | Package | Install |
+|---|---|---|
+| **Node.js/TypeScript** | npm | `npm install @kyvshield/rest-sdk` |
+| **PHP** | Packagist | `composer require kyvshield/rest-sdk` |
+| **Java** | JitPack | `com.github.moussa-innolink.kyv_shield_restfull:java:1.0.0` |
+| **Kotlin** | JitPack | `com.github.moussa-innolink.kyv_shield_restfull:kotlin:1.0.0` |
+| **Go** | Go Modules | `go get github.com/moussa-innolink/kyv_shield_restfull/go` |
+
+Source: [github.com/moussa-innolink/kyv_shield_restfull](https://github.com/moussa-innolink/kyv_shield_restfull)
 
 ## API URLs
 
