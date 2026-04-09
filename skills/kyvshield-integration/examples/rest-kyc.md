@@ -290,8 +290,8 @@ Typed, self-contained SDKs for server-to-server integration:
 |----------|---------|
 | Node.js/TypeScript | `npm install @kyvshield/rest-sdk` |
 | PHP | `composer require kyvshield/rest-sdk` |
-| Java | JitPack: `com.github.moussa-innolink.kyv_shield_restfull:java:1.2.0` |
-| Kotlin | JitPack: `com.github.moussa-innolink.kyv_shield_restfull:kotlin:1.2.0` |
+| Java | JitPack: `com.github.moussa-innolink.kyv_shield_restfull:java:1.2.1` |
+| Kotlin | JitPack: `com.github.moussa-innolink.kyv_shield_restfull:kotlin:1.2.1` |
 | Go | `go get github.com/moussa-innolink/kyv_shield_restfull/go` |
 
 Source: [github.com/moussa-innolink/kyv_shield_restfull](https://github.com/moussa-innolink/kyv_shield_restfull)

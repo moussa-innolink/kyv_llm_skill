@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.moussa-innolink.kyv_shield_restfull:kotlin:1.2.0")
+    implementation("com.github.moussa-innolink.kyv_shield_restfull:kotlin:1.2.1")
 }
 ```
 
@@ -29,7 +29,7 @@ dependencies {
 <dependency>
     <groupId>com.github.moussa-innolink.kyv_shield_restfull</groupId>
     <artifactId>kotlin</artifactId>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
 </dependency>
 ```
 
