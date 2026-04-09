@@ -28,8 +28,8 @@ Server-to-server SDKs for backend integration. No camera, no UI — send images 
 |---|---|---|
 | **Node.js/TypeScript** | npm | `npm install @kyvshield/rest-sdk` |
 | **PHP** | Packagist | `composer require kyvshield/rest-sdk` |
-| **Java** | JitPack | `com.github.moussa-innolink.kyv_shield_restfull:java:1.0.0` |
-| **Kotlin** | JitPack | `com.github.moussa-innolink.kyv_shield_restfull:kotlin:1.0.0` |
+| **Java** | JitPack | `com.github.moussa-innolink.kyv_shield_restfull:java:1.1.0` |
+| **Kotlin** | JitPack | `com.github.moussa-innolink.kyv_shield_restfull:kotlin:1.1.0` |
 | **Go** | Go Modules | `go get github.com/moussa-innolink/kyv_shield_restfull/go` |
 
 Source: [github.com/moussa-innolink/kyv_shield_restfull](https://github.com/moussa-innolink/kyv_shield_restfull)

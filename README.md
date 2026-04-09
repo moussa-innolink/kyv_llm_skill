@@ -52,8 +52,8 @@ For server-to-server KYC verification (no camera/UI needed):
 |----------|---------|
 | Node.js/TypeScript | `npm install @kyvshield/rest-sdk` |
 | PHP | `composer require kyvshield/rest-sdk` |
-| Java | JitPack: `com.github.moussa-innolink.kyv_shield_restfull:java:1.0.0` |
-| Kotlin | JitPack: `com.github.moussa-innolink.kyv_shield_restfull:kotlin:1.0.0` |
+| Java | JitPack: `com.github.moussa-innolink.kyv_shield_restfull:java:1.1.0` |
+| Kotlin | JitPack: `com.github.moussa-innolink.kyv_shield_restfull:kotlin:1.1.0` |
 | Go | `go get github.com/moussa-innolink/kyv_shield_restfull/go` |
 
 ## Documentation
