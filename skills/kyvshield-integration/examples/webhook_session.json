@@ -16,6 +16,16 @@
       "steps_completed": 3,
       "steps_failed": 0,
       "steps_passed": 3
+    },
+    "aml_screening": {
+      "status": "clear",
+      "risk_level": "low",
+      "is_sanctioned": false,
+      "is_pep": false,
+      "matches": [],
+      "screened_against": ["ofac", "un", "eu", "uk", "fr"],
+      "screened_at": "2026-04-06T22:38:24Z",
+      "total_entries_checked": 75746
     }
   }
 }

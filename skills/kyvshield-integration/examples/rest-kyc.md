@@ -142,6 +142,16 @@ curl -X POST https://kyvshield-naruto.innolinkcloud.com/api/v1/kyc/verify \
       "processing_time_ms": 4800
     }
   ],
+  "aml_screening": {
+    "status": "clear",
+    "risk_level": "low",
+    "is_sanctioned": false,
+    "is_pep": false,
+    "matches": [],
+    "screened_against": ["ofac", "un", "eu", "uk", "fr"],
+    "screened_at": "2026-04-10T12:00:00Z",
+    "total_entries_checked": 75746
+  },
   "processing_time_ms": 15000
 }
 ```

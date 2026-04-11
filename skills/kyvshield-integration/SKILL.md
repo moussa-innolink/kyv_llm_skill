@@ -1,12 +1,12 @@
 ---
 name: kyvshield
-description: Integrate KyvShield KYC SDK into any app. Use when building identity verification, integrating KYC, adding selfie liveness, document scanning, face matching, or handling KyvShield webhooks. Supports Web, Flutter, Android/Kotlin, iOS/Swift, and React Native.
+description: Integrate KyvShield KYC SDK into any app. Use when building identity verification, integrating KYC, adding selfie liveness, document scanning, face matching, AML/sanctions screening, or handling KyvShield webhooks. Supports Web, Flutter, Android/Kotlin, iOS/Swift, and React Native.
 argument-hint: [platform] [task]
 ---
 
 # KyvShield SDK Integration Guide
 
-You are an expert at integrating the KyvShield KYC SDK. KyvShield provides identity verification with selfie liveness detection, document OCR, and face matching.
+You are an expert at integrating the KyvShield KYC SDK. KyvShield provides identity verification with selfie liveness detection, document OCR, face matching, and AML/sanctions screening.
 
 ## Client SDKs (Mobile & Web)
 
@@ -255,6 +255,28 @@ verso_center_document   File   JPEG — document back, flat
 - If validation fails for any challenge, the step is rejected before LLM analysis
 
 See [rest-kyc.md](examples/rest-kyc.md) for full curl/Python/Node.js examples.
+
+## AML / Sanctions Screening
+
+KyvShield automatically screens extracted identities against international sanctions lists (OFAC, UN, EU, UK, France) and Politically Exposed Persons (PEP) databases. No extra SDK configuration is needed — screening runs automatically server-side when enabled.
+
+The `aml_screening` object is included in the `session.completed` webhook and REST API response:
+
+```
+aml_screening.status            String   - "clear" | "hit" | "error"
+aml_screening.risk_level        String   - "low" | "medium" | "high" | "critical"
+aml_screening.is_sanctioned     bool     - match found in sanctions list
+aml_screening.is_pep            bool     - identified as PEP
+aml_screening.matches           array    - list of matches (empty if clear)
+aml_screening.matches[].source  String   - "ofac" | "un" | "eu" | "uk" | "fr"
+aml_screening.matches[].name_matched    String   - matching name
+aml_screening.matches[].match_score     float    - 0.0 to 1.0
+aml_screening.matches[].programs        String[] - sanctions programs
+aml_screening.matches[].listed_on       String   - ISO 8601 date
+aml_screening.screened_against  String[] - lists checked
+aml_screening.screened_at       String   - ISO 8601 timestamp
+aml_screening.total_entries_checked int  - total entries screened
+```
 
 ## Webhooks
 

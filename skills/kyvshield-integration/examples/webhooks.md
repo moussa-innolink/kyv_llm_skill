@@ -394,6 +394,16 @@ func webhookHandler(w http.ResponseWriter, r *http.Request) {
       "steps_completed": 3,
       "steps_failed": 0,
       "steps_passed": 3
+    },
+    "aml_screening": {
+      "status": "clear",
+      "risk_level": "low",
+      "is_sanctioned": false,
+      "is_pep": false,
+      "matches": [],
+      "screened_against": ["ofac", "un", "eu", "uk", "fr"],
+      "screened_at": "2026-04-06T22:38:24Z",
+      "total_entries_checked": 75746
     }
   }
 }
@@ -474,6 +484,15 @@ func webhookHandler(w http.ResponseWriter, r *http.Request) {
 | `final_result.steps.overall_confidence` | float | Average confidence |
 | `final_result.steps.processing_time_ms` | int | Total processing time |
 | `final_result.steps.rejection_reason` | string | Reason if rejected (empty if passed) |
+| `final_result.aml_screening` | object | AML/Sanctions screening result (when enabled) |
+| `final_result.aml_screening.status` | string | `clear`, `hit`, or `error` |
+| `final_result.aml_screening.risk_level` | string | `low`, `medium`, `high`, `critical` |
+| `final_result.aml_screening.is_sanctioned` | bool | Match found in sanctions list |
+| `final_result.aml_screening.is_pep` | bool | Identified as Politically Exposed Person |
+| `final_result.aml_screening.matches` | array | List of matches (empty if clear) |
+| `final_result.aml_screening.screened_against` | string[] | Lists checked (e.g., `ofac`, `un`, `eu`, `uk`, `fr`) |
+| `final_result.aml_screening.screened_at` | string | ISO 8601 screening timestamp |
+| `final_result.aml_screening.total_entries_checked` | int | Total sanctions entries screened |
 
 ## Retry Policy
 
