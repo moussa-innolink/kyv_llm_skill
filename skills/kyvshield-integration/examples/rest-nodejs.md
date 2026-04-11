@@ -42,6 +42,7 @@ const result = await client.verify({
   versoChallengeMode: 'minimal',
   selfieChhallengeMode: 'minimal',
   requireFaceMatch: true,
+  requireAml: true,
   kycIdentifier: 'user-12345',
   images: {
     selfie_center_face: './selfie_centered.jpg',

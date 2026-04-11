@@ -79,6 +79,7 @@ val flow = KyvshieldFlowConfig(
     documentDisplayMode = DocumentDisplayMode.standard,
     challengeMode = ChallengeMode.minimal,
     requireFaceMatch = true,
+    requireAml = true,
     playChallengeAudio = true,
     maxChallengeAudioPlay = ChallengeAudioRepeat.once,
     pauseBetweenAudioPlayMs = 1000L,

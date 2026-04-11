@@ -76,6 +76,7 @@ final result = await Kyvshield.initKyc(
     documentDisplayMode: DocumentDisplayMode.standard,
     challengeMode: ChallengeMode.minimal,
     requireFaceMatch: true,
+    requireAml: true,
     playChallengeAudio: true,
     maxChallengeAudioPlay: ChallengeAudioRepeat.once,
     pauseBetweenAudioPlay: Duration(seconds: 1),

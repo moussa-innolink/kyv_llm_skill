@@ -48,6 +48,7 @@ resp, err := client.Verify(ctx, &kyvshield.VerifyOptions{
     RectoChallengeMode:   "minimal",
     VersoChallengeMode:   "minimal",
     RequireFaceMatch:     true,
+    RequireAml:           true,
     KycIdentifier:        "user-12345",
     Images: map[string]string{
         "selfie_center_face":    "./selfie_centered.jpg",

@@ -73,6 +73,7 @@ KycResponse result = client.verify(
         .rectoChallengeMode(ChallengeMode.MINIMAL)
         .versoChallengeMode(ChallengeMode.MINIMAL)
         .requireFaceMatch(true)
+        .requireAml(true)
         .kycIdentifier("user-12345")
         .addImage("selfie_center_face", "./selfie_centered.jpg")
         .addImage("selfie_close_eyes", "./selfie_eyes_closed.jpg")

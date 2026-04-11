@@ -87,6 +87,7 @@ func startKyc(doc: KyvshieldDocument) {
         selfieDisplayMode: .standard,
         documentDisplayMode: .standard,
         requireFaceMatch: true,
+        requireAml: true,
         showIntroPage: true,
         showInstructionPages: true,
         showResultPage: true,

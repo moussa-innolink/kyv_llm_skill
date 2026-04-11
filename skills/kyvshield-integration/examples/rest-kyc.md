@@ -40,6 +40,7 @@ curl -X POST https://kyvshield-naruto.innolinkcloud.com/api/v1/kyc/verify \
   -F 'target=SN-CIN' \
   -F 'language=fr' \
   -F 'require_face_match=true' \
+  -F 'require_aml=true' \
   -F 'kyc_identifier=user-12345' \
   -F 'selfie_challenge_mode=standard' \
   -F 'recto_challenge_mode=minimal' \
@@ -167,6 +168,7 @@ curl -X POST https://kyvshield-naruto.innolinkcloud.com/api/v1/kyc/verify \
 | `recto_challenge_mode` | string | If recto in steps | `minimal`, `standard`, `strict` |
 | `verso_challenge_mode` | string | If verso in steps | `minimal`, `standard`, `strict` |
 | `require_face_match` | string | No | `true` to compare selfie vs document face |
+| `require_aml` | string | No | `true` to enable AML sanctions screening |
 | `kyc_identifier` | string | No | Your reference ID (returned in webhooks) |
 
 ## Image Files Reference
@@ -212,6 +214,7 @@ resp = httpx.post(
         "recto_challenge_mode": "minimal",
         "verso_challenge_mode": "minimal",
         "require_face_match": "true",
+        "require_aml": "true",
         "kyc_identifier": "user-12345",
     },
     files=files,
@@ -242,6 +245,7 @@ form.append('selfie_challenge_mode', 'minimal');
 form.append('recto_challenge_mode', 'minimal');
 form.append('verso_challenge_mode', 'minimal');
 form.append('require_face_match', 'true');
+form.append('require_aml', 'true');
 form.append('kyc_identifier', 'user-12345');
 
 // One image per challenge

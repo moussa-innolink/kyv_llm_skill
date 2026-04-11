@@ -78,6 +78,7 @@ Complete HTML page with all options and result handling.
           documentDisplayMode: 'standard',
           challengeMode: 'minimal',
           requireFaceMatch: true,
+          requireAml: true,
           playChallengeAudio: true,
           maxChallengeAudioPlay: 'once',
           pauseBetweenAudioPlayMs: 1000,
@@ -176,6 +177,7 @@ Complete HTML page with all options and result handling.
 | `showResultPage` | boolean | `true` | Show result summary at end |
 | `showSuccessPerStep` | boolean | `true` | Show success after each step |
 | `requireFaceMatch` | boolean | `true` | Compare selfie to document photo |
+| `requireAml` | boolean | `false` | AML sanctions screening |
 | `playChallengeAudio` | boolean | `false` | Play audio for liveness challenges |
 | `maxChallengeAudioPlay` | string | `'once'` | `'once'`, `'twice'`, `'thrice'` |
 | `pauseBetweenAudioPlayMs` | number | `1000` | Pause between audio replays (ms) |

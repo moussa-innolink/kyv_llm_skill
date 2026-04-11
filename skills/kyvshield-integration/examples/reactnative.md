@@ -90,6 +90,7 @@ const flow: KyvshieldFlowConfig = {
   documentDisplayMode: 'standard' as DocumentDisplayMode,
   challengeMode: 'minimal' as ChallengeMode,
   requireFaceMatch: true,
+  requireAml: true,
   playChallengeAudio: true,
   maxChallengeAudioPlay: 'once',
   pauseBetweenAudioPlayMs: 1000,

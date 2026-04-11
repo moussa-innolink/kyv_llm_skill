@@ -47,6 +47,7 @@ $result = $client->verify(new VerifyOptions(
         'verso'  => 'minimal',
     ],
     requireFaceMatch: true,
+    requireAml: true,
     kycIdentifier: 'user-12345',
     images: [
         'selfie_center_face'    => '/path/to/selfie_centered.jpg',

@@ -88,6 +88,7 @@ showInstructionPages   bool = true
 showResultPage         bool = true
 showSuccessPerStep     bool = true
 requireFaceMatch       bool = true
+requireAml             bool = false       - AML sanctions screening
 playChallengeAudio     bool = false
 target                 KyvshieldDocument?  - from /api/v1/documents
 kycIdentifier          String?  - your reference ID (returned in webhooks)
@@ -226,6 +227,7 @@ selfie_challenge_mode   String (optional)      override for selfie step
 recto_challenge_mode    String (optional)      override for recto step
 verso_challenge_mode    String (optional)      override for verso step
 require_face_match      String (optional)      "true"
+require_aml             String (optional)      "true" — AML sanctions screening
 kyc_identifier          String (optional)      your reference ID
 ```
 

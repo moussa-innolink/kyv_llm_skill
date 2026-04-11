@@ -70,6 +70,7 @@ val result = client.verify(VerifyOptions(
     rectoChallengeMode = ChallengeMode.MINIMAL,
     versoChallengeMode = ChallengeMode.MINIMAL,
     requireFaceMatch = true,
+    requireAml = true,
     kycIdentifier = "user-12345",
     images = mapOf(
         "selfie_center_face" to "./selfie_centered.jpg",
