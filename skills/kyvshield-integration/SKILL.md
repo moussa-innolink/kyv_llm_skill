@@ -260,9 +260,28 @@ See [rest-kyc.md](examples/rest-kyc.md) for full curl/Python/Node.js examples.
 
 ## AML / Sanctions Screening
 
-KyvShield automatically screens extracted identities against international sanctions lists (OFAC, UN, EU, UK, France) and Politically Exposed Persons (PEP) databases. No extra SDK configuration is needed — screening runs automatically server-side when enabled.
+KyvShield screens extracted identities against international sanctions lists (OFAC, UN, EU, UK, France) and Politically Exposed Persons (PEP) databases.
 
-The `aml_screening` object is included in the `session.completed` webhook and REST API response:
+### Inline (during KYC)
+Set `requireAml: true` in `KyvshieldFlowConfig` or `require_aml: true` in the REST API to screen as part of the KYC flow.
+
+### Standalone: POST /api/v1/verify/aml
+Screen a person without running a full KYC verification.
+
+**Request:**
+```json
+{
+  "first_name": "John",
+  "last_name": "Doe",
+  "birth_date": "YYYY-MM-DD",
+  "nationality": "XX",
+  "id_number": "...",
+  "id_type": "national_id"
+}
+```
+Required fields: `first_name`, `last_name`. Optional: `birth_date`, `nationality`, `id_number`, `id_type`.
+
+The `aml_screening` object is included in the `session.completed` webhook, REST API response, and standalone AML response:
 
 ```
 aml_screening.status            String   - "clear" | "hit" | "error"

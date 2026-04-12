@@ -296,6 +296,107 @@ If validation fails, the API returns an error with details about which challenge
 - **Heatmap**: Fraud detection heatmap generated automatically for document steps
 - **Batch**: `verifyBatch()` supports up to 10 concurrent verifications
 
+## Standalone AML Screening
+
+### POST /api/v1/verify/aml
+
+Screen a person against international sanctions lists and PEP databases without running a full KYC verification.
+
+#### curl
+
+```bash
+curl -X POST https://kyvshield-naruto.innolinkcloud.com/api/v1/verify/aml \
+  -H "X-API-Key: YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "first_name": "Vladimir",
+    "last_name": "Putin",
+    "birth_date": "1952-10-07",
+    "nationality": "RU"
+  }'
+```
+
+#### Python
+
+```python
+import httpx
+
+resp = httpx.post(
+    "https://kyvshield-naruto.innolinkcloud.com/api/v1/verify/aml",
+    headers={"X-API-Key": "YOUR_API_KEY"},
+    json={
+        "first_name": "Vladimir",
+        "last_name": "Putin",
+        "birth_date": "1952-10-07",
+        "nationality": "RU",
+    },
+    timeout=30,
+)
+result = resp.json()
+print(f"Status: {result['status']}")         # 'clear' | 'hit' | 'error'
+print(f"Risk: {result['risk_level']}")       # 'low' | 'medium' | 'high' | 'critical'
+print(f"Sanctioned: {result['is_sanctioned']}")
+print(f"PEP: {result['is_pep']}")
+for match in result.get("matches", []):
+    print(f"  - {match['source']}: {match['name_matched']} (score={match['match_score']:.2f})")
+```
+
+#### Node.js
+
+```javascript
+const resp = await fetch('https://kyvshield-naruto.innolinkcloud.com/api/v1/verify/aml', {
+  method: 'POST',
+  headers: {
+    'X-API-Key': 'YOUR_API_KEY',
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    first_name: 'Vladimir',
+    last_name: 'Putin',
+    birth_date: '1952-10-07',
+    nationality: 'RU',
+  }),
+});
+const result = await resp.json();
+console.log('Status:', result.status);       // 'clear' | 'hit' | 'error'
+console.log('Risk:', result.risk_level);
+console.log('Matches:', result.matches.length);
+```
+
+#### Response
+
+```json
+{
+  "status": "hit",
+  "risk_level": "critical",
+  "is_sanctioned": true,
+  "is_pep": true,
+  "matches": [
+    {
+      "source": "ofac",
+      "name_matched": "Vladimir Vladimirovich PUTIN",
+      "match_score": 0.98,
+      "programs": ["RUSSIA-EO14024"],
+      "listed_on": "2022-02-25"
+    }
+  ],
+  "screened_against": ["ofac", "un", "eu", "uk", "fr"],
+  "screened_at": "2026-04-12T12:00:00Z",
+  "total_entries_checked": 75746
+}
+```
+
+#### Request Fields
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `first_name` | string | Yes | Person's first name |
+| `last_name` | string | Yes | Person's last name |
+| `birth_date` | string | No | Date of birth (YYYY-MM-DD) |
+| `nationality` | string | No | ISO 3166-1 alpha-2 country code |
+| `id_number` | string | No | Identity document number |
+| `id_type` | string | No | Document type (`national_id`, `passport`, etc.) |
+
 ## Server SDKs
 
 Typed, self-contained SDKs for server-to-server integration:
