@@ -15,10 +15,10 @@ KyvShield client SDKs for end-user facing apps (camera, liveness challenges, UI)
 | Platform | Package | Install |
 |---|---|---|
 | **Web** | CDN | `<script src="https://kyvshield-naruto.innolinkcloud.com/static/sdk/kyvshield.min.js">` |
-| **Flutter** | Git | `kyvshield_lite` from `github.com/moussa-innolink/kyv_flutter_lite` |
-| **Android** | JitPack | `com.github.moussa-innolink:kyv_android:0.0.4` |
-| **iOS** | SPM | `github.com/moussa-innolink/kyv_swift` version `0.0.4` |
-| **React Native** | npm | `@kyvshield/react-native-lite@0.0.4` |
+| **Flutter** | Git | `kyvshield_lite` from `github.com/moussa-innolink/kyv_flutter_lite` ref `0.0.5` |
+| **Android** | JitPack | `com.github.moussa-innolink:kyv_android:0.0.5` |
+| **iOS** | SPM | `github.com/moussa-innolink/kyv_swift` version `0.0.5` |
+| **React Native** | npm | `@kyvshield/react-native-lite@0.0.7` |
 
 ## Server SDKs (REST API — Batch KYC)
 
@@ -28,8 +28,8 @@ Server-to-server SDKs for backend integration. No camera, no UI — send images 
 |---|---|---|
 | **Node.js/TypeScript** | npm | `npm install @kyvshield/rest-sdk` |
 | **PHP** | Packagist | `composer require kyvshield/rest-sdk` |
-| **Java** | JitPack | `com.github.moussa-innolink.kyv_shield_restfull:java:1.2.0` |
-| **Kotlin** | JitPack | `com.github.moussa-innolink.kyv_shield_restfull:kotlin:1.2.0` |
+| **Java** | JitPack | `com.github.moussa-innolink.kyv_shield_restfull:java:1.5.0` |
+| **Kotlin** | JitPack | `com.github.moussa-innolink.kyv_shield_restfull:kotlin:1.5.0` |
 | **Go** | Go Modules | `go get github.com/moussa-innolink/kyv_shield_restfull/go` |
 
 Source: [github.com/moussa-innolink/kyv_shield_restfull](https://github.com/moussa-innolink/kyv_shield_restfull)
@@ -257,6 +257,57 @@ verso_center_document   File   JPEG — document back, flat
 - If validation fails for any challenge, the step is rejected before LLM analysis
 
 See [rest-kyc.md](examples/rest-kyc.md) for full curl/Python/Node.js examples.
+
+## Face Identification (1:N Search)
+
+### `POST /api/v1/identify`
+Upload a face photo to search for matching identities among all KYC-verified persons.
+
+**Multipart form or JSON:**
+```
+image       File/base64 (required)  - face photo
+top_k       int (optional)          - max results (1-10, default 3)
+min_score   float (optional)        - minimum similarity (0-1, default 0.6)
+```
+
+**Response:**
+```json
+{
+  "success": true,
+  "search_id": "uuid",
+  "results_count": 2,
+  "matches": [
+    {
+      "identity_id": "...",
+      "score": 0.87,
+      "full_name": "MOUSSA NDOUR",
+      "identifier_value": "1 06 19930515 00026 8",
+      "document_type": "SN-CIN",
+      "country": "SN"
+    }
+  ],
+  "top_k": 3,
+  "min_score": 0.6,
+  "processing_time_ms": 650
+}
+```
+
+**REST SDK:** `client.identify('./face.jpg', { topK: 3, minScore: 0.6 })`
+
+## Face Verification (1:1 Compare)
+
+### `POST /api/v1/verify/face`
+Compare two face photos to verify if they are the same person.
+
+**Multipart form:**
+```
+target_image       File (required)  - reference face
+source_image       File (required)  - face to verify
+detection_model    String (optional) - default "scrfd_10g"
+recognition_model  String (optional) - default "buffalo_l"
+```
+
+**REST SDK:** `client.verifyFace('./selfie.jpg', './id_photo.jpg')`
 
 ## AML / Sanctions Screening
 
